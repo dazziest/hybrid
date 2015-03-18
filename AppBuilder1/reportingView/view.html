@@ -1,0 +1,13 @@
+<div data-role="view" data-title="Reporting" data-layout="main" data-model="app.models.reportingView">
+
+    <ul data-role="listview" data-style="inset" data-template="reportingViewListTemplate" data-bind="{ source: reportingViewList.viewModel.dataSource, events: {click: reportingViewList.viewModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+
+    </ul>
+    <script type="text/x-kendo-template" id="reportingViewListTemplate">
+        <div class="image-with-text">
+
+            <h3><span class="#: data.icon() #"></span>#: data.Text #</h3>
+
+        </div>
+    </script>
+</div>

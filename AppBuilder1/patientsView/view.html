@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Patients" data-layout="main" data-model="app.models.patientsView">
+    <!--  Certain features like grouping and inset styling are not supported when endless scroll is enabled. -->
+    <ul data-role="listview" data-style="" data-template="patientsViewListTemplate" data-bind="{ source: patientsViewList.viewModel.dataSource, events: {click: patientsViewList.viewModel.itemClick} }" data-pull-to-refresh="true" data-endless-scroll="true"
+    data-filterable="{field: 'firstName', operator: 'contains'}">
+
+    </ul>
+    <script type="text/x-kendo-template" id="patientsViewListTemplate">
+        <div class="image-with-text">
+            <img src="#= testUrl #" width="30%" height="30%">
+            <h3><span class="#: data.icon() #"></span>#: data.Text #</h3>
+            <p>#: data.subText #</p>
+        </div>
+    </script>
+</div>
